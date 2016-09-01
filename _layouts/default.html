@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+
+<!-- <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-74998633-1', 'auto');
+ga('send', 'pageview');
+
+</script> -->
+
+{% if page.title != "404" %}
+
+<header>
+    <div id="logo">
+        <img src="http://gmum.net/images/logo.jpg"/>
+    </div>
+    <aside>
+        <h1>
+            <title>
+                ChEMBL benchmarks
+            </title></h1>
+        <!-- <nav>
+            {% if page.title == "Home" %}
+            <a class="scroll-on-page-link" href="#short-cv">CV</a>
+            <a class="scroll-on-page-link" href="#publications">Publications</a>
+            <a class="scroll-on-page-link" href="#code">Code</a>
+            <a class="scroll-on-page-link" href="#talks">Talks</a>
+            {% else %}
+            <a href="/">CV</a>
+            <a href="/">Publications</a>
+            <a href="/">Code</a>
+            <a href="/">Talks</a>
+            {% endif %}
+            <a href="/4students">4students</a>
+        </nav> -->
+    </aside>
+</header>
+
+{% endif %}
+
+<div class="row-wrapper">
+    <div class="outer-container">
+        <div id="js-fadeInElement" class="fade-in-element">
+            <div id="js-parallax-window" class="parallax-window">
+                <div class="parallax-static-content">
+                    {{content}}
+                </div>
+                <div id="js-parallax-background" class="parallax-background"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
