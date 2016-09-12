@@ -4,40 +4,39 @@ title: Home
 permalink: index.html
 ---
 
-<p> ChEMBL benchmarks</p>
+<h1> ChEMBL benchmarks </h1>
 
-<!-- <cells>
-    {% for entry in site.data.talks %}
+<h2> Datasets </h2>
+
+<p> Datasets include compounds activity records from experiments on 5-HT1A, 5-HT2A, 5-HT2C, 5-HT6, 5-HT7, A1, A2A, D2, H3, M1 splitted into train/test. Each compound is linked to <b>smiles</b>, <b>year of first publication</b>, <b>murcko scaffold</b> and <b>bioactivity</b>. While few versions are available for research purposes, main benchmarks are run against v1, a version with label derived only from records with Ki value reported. </p>
+<p>Dataset can be downloaded <a href="gmum.net/files/datasets">here</a> or using our <a href="https://github.com/gmum/chembl_baselines/blob/master/src/data/download.py">helper scripts</a>.
+Additionally, see <a href="https://github.com/gmum/chembl_baselines/blob/master/notebooks/Basic_example.ipynb">Basic_example.ipynb</a> (independent of drgmum) and <a href="https://github.com/gmum/chembl_baselines/blob/master/notebooks/Extended_example.ipynb">Extended_example.ipynb</a> for examples how to load datasets and run basic methods. </p>
+
+<h2> Benchmarks </h2>
+
+<p> We report benchmarks for representations and models. Each experiment comes currently in 2 versions, one for CV and other for TimeKFold model evaluation (Leave One Cluster Out will be published soon).
+
+{% for experiment in site.data.reports %}
+<p></p> <h3 id={{ experiment.name }}> {{ experiment.name }} </h3>
+
+<cells>
+    {% for stuff in experiment.files %}
     <div class="cell">
-        <div class="cell-image">
-            <img src="{{ entry.img }}" alt="Logo image">
-        </div>
-        <div class="cell-content">
-            <h1>{{ entry.title }}</h1>
 
-            <p class="small-margin"> {{ entry.content }} </p>
+    	<p> {{ stuff.title }} </p>
+    	<center>
+    	{% if stuff.type == "img" %}
+    	<img src={{ stuff.fname }}>
+    	{% endif %}
 
-            <p class="cell-detail">
-                {% if entry.details %}
-                {{ entry.details }} <br>
-                {% endif %}
 
-                {% if entry.github %}
-                <a href="{{ entry.github }}" class="flat"><i class="fa fa-github"></i> github </a>
-                {% endif %}
+    	{{ stuff.content }}
 
-                {% if entry.url %}
-                <a href="{{ entry.url }}" class="flat"><i class="fa fa-link"></i> url </a>
-                {% endif %}
-
-                {% if entry.pdf %}
-                <a href="{{ entry.pdf }}" class="flat"> slides </a>
-                {% endif %}
-            </p>
-        </div>
+    	{% if stuff.type == "html" %}
+    	{{ stuff.fname }}
+    	{% endif %}
+    	</center>
     </div>
     {% endfor %}
 </cells>
- -->
-
-
+{% endfor %}

@@ -18,7 +18,7 @@ header {
   @include outer-container;
 
   aside {
-    @include span-columns(10); 
+    @include span-columns(9); 
     @include omega();
   }
 
@@ -26,11 +26,10 @@ header {
     color: $base-font-color;
     @include span-columns(10 of 10);
     @include fill-parent();
-  //  font-size: 2em;
   }
 
   #logo {
-    @include span-columns(2);
+    @include span-columns(3);
     img {
 //       transform: scale(0.8, 0.8); 
     }
@@ -74,7 +73,7 @@ $parallax-background-height: $parallax-window-height * 1;
 
 .parallax-background {
   @include span-columns(8 of 8);
-  background: url("/assets/img/bg.png");
+  background: url("/assets/bg.png");
   background-position: top;
   z-index: -1;
   background-size: repeat;
@@ -133,7 +132,7 @@ cells {
   width: 100%;
   .cell-image,
   .cell-content {
-    @include span-columns(8);
+    @include span-columns(10);
     display: table-cell;
     vertical-align: $comment-image-vert-alignment;
   }
