@@ -1,3 +1,3 @@
-# kudkudak.github.io
+# opus.github.io
 
-Personal page created using Jekyll and Bourbon.
+Website for OPUS project
