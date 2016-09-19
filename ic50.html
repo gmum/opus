@@ -11,8 +11,8 @@ permalink: ic50.html
     <main id="plotly">
     </main>
     <aside>
-      <br><br>
-      Extra information:
+      <br><br><br><br><br>
+      Measurements
       <div id="hoverinfo", style="height: 200px; border: 1px; border-color: black;">
       </div>
       <br><br><br><br><br><br><br>
@@ -29,6 +29,7 @@ permalink: ic50.html
   };
 
 fmap = ["ic50/CHEMBL2035", "ic50/CHEMBL3759", "ic50/CHEMBL3446", "ic50/CHEMBL3614", "ic50/CHEMBL3996", "ic50/CHEMBL2501", "ic50/CHEMBL210", "ic50/CHEMBL1075228", "ic50/CHEMBL3998", "ic50/CHEMBL2096970", "ic50/CHEMBL2094250", "ic50/CHEMBL2094251", "ic50/CHEMBL1833", "ic50/CHEMBL276", "ic50/CHEMBL2094254", "ic50/CHEMBL270", "ic50/CHEMBL273", "ic50/CHEMBL1836", "ic50/CHEMBL4354", "ic50/CHEMBL5113", "ic50/CHEMBL4123", "ic50/CHEMBL3724", "ic50/CHEMBL2434", "ic50/CHEMBL2096671", "ic50/CHEMBL266", "ic50/CHEMBL3197", "ic50/CHEMBL4894", "ic50/CHEMBL2094268", "ic50/CHEMBL3459", "ic50/CHEMBL3359", "ic50/CHEMBL5038", "ic50/CHEMBL2327", "ic50/CHEMBL2107", "ic50/CHEMBL3157", "ic50/CHEMBL2095200", "ic50/CHEMBL229", "ic50/CHEMBL1921", "ic50/CHEMBL4015", "ic50/CHEMBL1804", "ic50/CHEMBL1805", "ic50/CHEMBL264", "ic50/CHEMBL265", "ic50/CHEMBL263", "ic50/CHEMBL2095158", "ic50/CHEMBL2095159", "ic50/CHEMBL302", "ic50/CHEMBL4111", "ic50/CHEMBL269", "ic50/CHEMBL4613", "ic50/CHEMBL2854", "ic50/CHEMBL4329", "ic50/CHEMBL4595", "ic50/CHEMBL1889", "ic50/CHEMBL2096909", "ic50/CHEMBL4080", "ic50/CHEMBL1881", "ic50/CHEMBL2858", "ic50/CHEMBL3795", "ic50/CHEMBL2291", "ic50/CHEMBL216", "ic50/CHEMBL2094129", "ic50/CHEMBL3066", "ic50/CHEMBL3911", "ic50/CHEMBL1907609", "ic50/CHEMBL227", "ic50/CHEMBL253", "ic50/CHEMBL252", "ic50/CHEMBL1811", "ic50/CHEMBL250", "ic50/CHEMBL257", "ic50/CHEMBL256", "ic50/CHEMBL255", "ic50/CHEMBL318", "ic50/CHEMBL319", "ic50/CHEMBL4124", "ic50/CHEMBL1169599", "ic50/CHEMBL317", "ic50/CHEMBL315", "ic50/CHEMBL5136", "ic50/CHEMBL2028", "ic50/CHEMBL2111386", "ic50/CHEMBL4607", "ic50/CHEMBL2111385", "ic50/CHEMBL4608", "ic50/CHEMBL4333", "ic50/CHEMBL1898", "ic50/CHEMBL4441", "ic50/CHEMBL4336", "ic50/CHEMBL4429", "ic50/CHEMBL3571", "ic50/CHEMBL1790", "ic50/CHEMBL3766", "ic50/CHEMBL1792", "ic50/CHEMBL3764", "ic50/CHEMBL1798", "ic50/CHEMBL5106", "ic50/CHEMBL2470", "ic50/CHEMBL277", "ic50/CHEMBL4427", "ic50/CHEMBL4424", "ic50/CHEMBL2203", "ic50/CHEMBL1907610", "ic50/CHEMBL249", "ic50/CHEMBL1867", "ic50/CHEMBL246", "ic50/CHEMBL5963", "ic50/CHEMBL1941", "ic50/CHEMBL3176", "ic50/CHEMBL3875", "ic50/CHEMBL1942", "ic50/CHEMBL1945", "ic50/CHEMBL329", "ic50/CHEMBL4130", "ic50/CHEMBL2871", "ic50/CHEMBL1628481", "ic50/CHEMBL2094257", "ic50/CHEMBL4877", "ic50/CHEMBL320", "ic50/CHEMBL5413", "ic50/CHEMBL4308", "ic50/CHEMBL4631", "ic50/CHEMBL3501", "ic50/CHEMBL5645", "ic50/CHEMBL2056", "ic50/CHEMBL233", "ic50/CHEMBL3508", "ic50/CHEMBL4554", "ic50/CHEMBL3710", "ic50/CHEMBL2373", "ic50/CHEMBL237", "ic50/CHEMBL1075140", "ic50/CHEMBL245", "ic50/CHEMBL1875", "ic50/CHEMBL4730", "ic50/CHEMBL5595", "ic50/CHEMBL4029", "ic50/CHEMBL2868", "ic50/CHEMBL231", "ic50/CHEMBL339", "ic50/CHEMBL4027", "ic50/CHEMBL232", "ic50/CHEMBL234", "ic50/CHEMBL4867", "ic50/CHEMBL236", "ic50/CHEMBL3371", "ic50/CHEMBL2049", "ic50/CHEMBL4315", "ic50/CHEMBL5017", "ic50/CHEMBL4317", "ic50/CHEMBL1901", "ic50/CHEMBL2094112", "ic50/CHEMBL2414", "ic50/CHEMBL217", "ic50/CHEMBL2413", "ic50/CHEMBL5071", "ic50/CHEMBL3155", "ic50/CHEMBL5076", "ic50/CHEMBL1917", "ic50/CHEMBL3473", "ic50/CHEMBL3250", "ic50/CHEMBL322", "ic50/CHEMBL4701", "ic50/CHEMBL2069", "ic50/CHEMBL344", "ic50/CHEMBL3952", "ic50/CHEMBL5872", "ic50/CHEMBL4792", "ic50/CHEMBL4908", "ic50/CHEMBL5700", "ic50/CHEMBL4018", "ic50/CHEMBL223", "ic50/CHEMBL1946", "ic50/CHEMBL226", "ic50/CHEMBL259", "ic50/CHEMBL224", "ic50/CHEMBL225", "ic50/CHEMBL5657", "ic50/CHEMBL3819", "ic50/CHEMBL1853", "ic50/CHEMBL3974", "ic50/CHEMBL1785", "ic50/CHEMBL2094117", "ic50/CHEMBL324", "ic50/CHEMBL2014", "ic50/CHEMBL1628472", "ic50/CHEMBL1850", "ic50/CHEMBL4777", "ic50/CHEMBL3636", "ic50/CHEMBL4616", "ic50/CHEMBL1855", "ic50/CHEMBL2096977", "ic50/CHEMBL3222", "ic50/CHEMBL274", "ic50/CHEMBL3263", "ic50/CHEMBL1916", "ic50/CHEMBL4921", "ic50/CHEMBL251", "ic50/CHEMBL298", "ic50/CHEMBL2093870", "ic50/CHEMBL3799", "ic50/CHEMBL3943", "ic50/CHEMBL3942", "ic50/CHEMBL219", "ic50/CHEMBL218", "ic50/CHEMBL3785", "ic50/CHEMBL4644", "ic50/CHEMBL214", "ic50/CHEMBL213", "ic50/CHEMBL211", "ic50/CHEMBL2095166", "ic50/CHEMBL1995", "ic50/CHEMBL3948", "ic50/CHEMBL4087", "ic50/CHEMBL4561", "ic50/CHEMBL4566", "ic50/CHEMBL2967", "ic50/CHEMBL2001", "ic50/CHEMBL4975", "ic50/CHEMBL1983", "ic50/CHEMBL5647", "ic50/CHEMBL1293267", "ic50/CHEMBL1075111", "ic50/CHEMBL3138", "ic50/CHEMBL2882", "ic50/CHEMBL3037", "ic50/CHEMBL4596", "ic50/CHEMBL5857", "ic50/CHEMBL1821", "ic50/CHEMBL2093864", "ic50/CHEMBL3252", "ic50/CHEMBL3833", "ic50/CHEMBL4959", "ic50/CHEMBL2093868", "ic50/CHEMBL3933", "ic50/CHEMBL1987", "ic50/CHEMBL3426", "ic50/CHEMBL2095160", "ic50/CHEMBL309", "ic50/CHEMBL3737"]
+fmap.sort()
 
   var files_select = document.getElementById('f_name');
   for (var i = 0; i < fmap.length; i++) {
@@ -45,8 +46,8 @@ fmap = ["ic50/CHEMBL2035", "ic50/CHEMBL3759", "ic50/CHEMBL3446", "ic50/CHEMBL361
     
     for (var i=0; i<allRows.length; i++) {
       row = allRows[i];
-      x.push( row['log IC50'] );
-      y.push( row['log Ki'] );
+      x.push( row['log Ki'] );
+      y.push( row['log IC50'] );
       text.push( row['uid'] );
       table.push( row['html'] );
     }
@@ -67,13 +68,24 @@ fmap = ["ic50/CHEMBL2035", "ic50/CHEMBL3759", "ic50/CHEMBL3446", "ic50/CHEMBL361
         mode: 'markers'
       }];
 
+      var damian_x = [], damian_y = [];
+
+      for (var i=0; i<100; i+=1){
+        damian_x.push(i/10. - 0.3);
+        damian_y.push(i/10.);
+      }
+
+      traces.push({x: damian_x, y:damian_y, mode: 'markers'});
+
       Plotly.newPlot('plotly', traces,
         {
           title: f_name,
           height: 800,
+          width: 800,
           margin: {pad: 0},
           hovermode:'closest', 
-          xaxis: {label: "IC50"},
+          xaxis: {title: "log10 Ki"},
+          yaxis: {title: "log10 IC50"},
           paper_bgcolor: 'rgba(0,0,0,0)', 
           plot_bgcolor: 'rgba(0, 0, 0, 0.0)'
         });
