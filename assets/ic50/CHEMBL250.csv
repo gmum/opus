@@ -1,0 +1,994 @@
+uid,log Ki,log IC50,html
+CHEMBL104,4.35478049883,4.54453930829,"Ki<br />
+        <style  type=""text/css"" >
+        
+        
+        </style>
+
+        <table id=""T_5ffd7570_7ea1_11e6_a668_485b393e1884"" None>
+        
+
+        <thead>
+            
+            <tr>
+                
+                <th class=""blank"">
+                
+                <th class=""col_heading level0 col0"">pubmed_id
+                
+                <th class=""col_heading level0 col1"">relation
+                
+                <th class=""col_heading level0 col2"">Ki
+                
+            </tr>
+            
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <th id=""T_5ffd7570_7ea1_11e6_a668_485b393e1884"" class=""row_heading level2 row0"">
+                    0
+                
+                <td id=""T_5ffd7570_7ea1_11e6_a668_485b393e1884row0_col0"" class=""data row0 col0"">
+                    0
+                
+                <td id=""T_5ffd7570_7ea1_11e6_a668_485b393e1884row0_col1"" class=""data row0 col1"">
+                    =
+                
+                <td id=""T_5ffd7570_7ea1_11e6_a668_485b393e1884row0_col2"" class=""data row0 col2"">
+                    22635
+                
+            </tr>
+            
+        </tbody>
+        </table>
+        <br />IC50<br />
+        <style  type=""text/css"" >
+        
+        
+        </style>
+
+        <table id=""T_6005a5ec_7ea1_11e6_a668_485b393e1884"" None>
+        
+
+        <thead>
+            
+            <tr>
+                
+                <th class=""blank"">
+                
+                <th class=""col_heading level0 col0"">pubmed_id
+                
+                <th class=""col_heading level0 col1"">relation
+                
+                <th class=""col_heading level0 col2"">IC50
+                
+            </tr>
+            
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <th id=""T_6005a5ec_7ea1_11e6_a668_485b393e1884"" class=""row_heading level2 row0"">
+                    0
+                
+                <td id=""T_6005a5ec_7ea1_11e6_a668_485b393e1884row0_col0"" class=""data row0 col0"">
+                    0
+                
+                <td id=""T_6005a5ec_7ea1_11e6_a668_485b393e1884row0_col1"" class=""data row0 col1"">
+                    =
+                
+                <td id=""T_6005a5ec_7ea1_11e6_a668_485b393e1884row0_col2"" class=""data row0 col2"">
+                    35038
+                
+            </tr>
+            
+        </tbody>
+        </table>
+        "
+CHEMBL1235246,-0.823908740944,-0.552841968658,"Ki<br />
+        <style  type=""text/css"" >
+        
+        
+        </style>
+
+        <table id=""T_600dd2e4_7ea1_11e6_a668_485b393e1884"" None>
+        
+
+        <thead>
+            
+            <tr>
+                
+                <th class=""blank"">
+                
+                <th class=""col_heading level0 col0"">pubmed_id
+                
+                <th class=""col_heading level0 col1"">relation
+                
+                <th class=""col_heading level0 col2"">Ki
+                
+            </tr>
+            
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <th id=""T_600dd2e4_7ea1_11e6_a668_485b393e1884"" class=""row_heading level2 row0"">
+                    0
+                
+                <td id=""T_600dd2e4_7ea1_11e6_a668_485b393e1884row0_col0"" class=""data row0 col0"">
+                    23403082
+                
+                <td id=""T_600dd2e4_7ea1_11e6_a668_485b393e1884row0_col1"" class=""data row0 col1"">
+                    =
+                
+                <td id=""T_600dd2e4_7ea1_11e6_a668_485b393e1884row0_col2"" class=""data row0 col2"">
+                    0.15
+                
+            </tr>
+            
+        </tbody>
+        </table>
+        <br />IC50<br />
+        <style  type=""text/css"" >
+        
+        
+        </style>
+
+        <table id=""T_60160590_7ea1_11e6_a668_485b393e1884"" None>
+        
+
+        <thead>
+            
+            <tr>
+                
+                <th class=""blank"">
+                
+                <th class=""col_heading level0 col0"">pubmed_id
+                
+                <th class=""col_heading level0 col1"">relation
+                
+                <th class=""col_heading level0 col2"">IC50
+                
+            </tr>
+            
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <th id=""T_60160590_7ea1_11e6_a668_485b393e1884"" class=""row_heading level2 row0"">
+                    0
+                
+                <td id=""T_60160590_7ea1_11e6_a668_485b393e1884row0_col0"" class=""data row0 col0"">
+                    23403082
+                
+                <td id=""T_60160590_7ea1_11e6_a668_485b393e1884row0_col1"" class=""data row0 col1"">
+                    =
+                
+                <td id=""T_60160590_7ea1_11e6_a668_485b393e1884row0_col2"" class=""data row0 col2"">
+                    0.28
+                
+            </tr>
+            
+        </tbody>
+        </table>
+        "
+CHEMBL1793831,1.00313301644,1.11394335231,"Ki<br />
+        <style  type=""text/css"" >
+        
+        
+        </style>
+
+        <table id=""T_601eac9a_7ea1_11e6_a668_485b393e1884"" None>
+        
+
+        <thead>
+            
+            <tr>
+                
+                <th class=""blank"">
+                
+                <th class=""col_heading level0 col0"">pubmed_id
+                
+                <th class=""col_heading level0 col1"">relation
+                
+                <th class=""col_heading level0 col2"">Ki
+                
+            </tr>
+            
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <th id=""T_601eac9a_7ea1_11e6_a668_485b393e1884"" class=""row_heading level2 row0"">
+                    0
+                
+                <td id=""T_601eac9a_7ea1_11e6_a668_485b393e1884row0_col0"" class=""data row0 col0"">
+                    0
+                
+                <td id=""T_601eac9a_7ea1_11e6_a668_485b393e1884row0_col1"" class=""data row0 col1"">
+                    =
+                
+                <td id=""T_601eac9a_7ea1_11e6_a668_485b393e1884row0_col2"" class=""data row0 col2"">
+                    14.3
+                
+            </tr>
+            
+            <tr>
+                
+                <th id=""T_601eac9a_7ea1_11e6_a668_485b393e1884"" class=""row_heading level2 row1"">
+                    1
+                
+                <td id=""T_601eac9a_7ea1_11e6_a668_485b393e1884row1_col0"" class=""data row1 col0"">
+                    1404229
+                
+                <td id=""T_601eac9a_7ea1_11e6_a668_485b393e1884row1_col1"" class=""data row1 col1"">
+                    =
+                
+                <td id=""T_601eac9a_7ea1_11e6_a668_485b393e1884row1_col2"" class=""data row1 col2"">
+                    9
+                
+            </tr>
+            
+            <tr>
+                
+                <th id=""T_601eac9a_7ea1_11e6_a668_485b393e1884"" class=""row_heading level2 row2"">
+                    2
+                
+                <td id=""T_601eac9a_7ea1_11e6_a668_485b393e1884row2_col0"" class=""data row2 col0"">
+                    19883461
+                
+                <td id=""T_601eac9a_7ea1_11e6_a668_485b393e1884row2_col1"" class=""data row2 col1"">
+                    =
+                
+                <td id=""T_601eac9a_7ea1_11e6_a668_485b393e1884row2_col2"" class=""data row2 col2"">
+                    7.94
+                
+            </tr>
+            
+        </tbody>
+        </table>
+        <br />IC50<br />
+        <style  type=""text/css"" >
+        
+        
+        </style>
+
+        <table id=""T_602745f8_7ea1_11e6_a668_485b393e1884"" None>
+        
+
+        <thead>
+            
+            <tr>
+                
+                <th class=""blank"">
+                
+                <th class=""col_heading level0 col0"">pubmed_id
+                
+                <th class=""col_heading level0 col1"">relation
+                
+                <th class=""col_heading level0 col2"">IC50
+                
+            </tr>
+            
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <th id=""T_602745f8_7ea1_11e6_a668_485b393e1884"" class=""row_heading level2 row0"">
+                    0
+                
+                <td id=""T_602745f8_7ea1_11e6_a668_485b393e1884row0_col0"" class=""data row0 col0"">
+                    0
+                
+                <td id=""T_602745f8_7ea1_11e6_a668_485b393e1884row0_col1"" class=""data row0 col1"">
+                    =
+                
+                <td id=""T_602745f8_7ea1_11e6_a668_485b393e1884row0_col2"" class=""data row0 col2"">
+                    13
+                
+            </tr>
+            
+            <tr>
+                
+                <th id=""T_602745f8_7ea1_11e6_a668_485b393e1884"" class=""row_heading level2 row1"">
+                    1
+                
+                <td id=""T_602745f8_7ea1_11e6_a668_485b393e1884row1_col0"" class=""data row1 col0"">
+                    0
+                
+                <td id=""T_602745f8_7ea1_11e6_a668_485b393e1884row1_col1"" class=""data row1 col1"">
+                    =
+                
+                <td id=""T_602745f8_7ea1_11e6_a668_485b393e1884row1_col2"" class=""data row1 col2"">
+                    13
+                
+            </tr>
+            
+        </tbody>
+        </table>
+        "
+CHEMBL280164,1.0,2.02954130604,"Ki<br />
+        <style  type=""text/css"" >
+        
+        
+        </style>
+
+        <table id=""T_602fdc04_7ea1_11e6_a668_485b393e1884"" None>
+        
+
+        <thead>
+            
+            <tr>
+                
+                <th class=""blank"">
+                
+                <th class=""col_heading level0 col0"">pubmed_id
+                
+                <th class=""col_heading level0 col1"">relation
+                
+                <th class=""col_heading level0 col2"">Ki
+                
+            </tr>
+            
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <th id=""T_602fdc04_7ea1_11e6_a668_485b393e1884"" class=""row_heading level2 row0"">
+                    0
+                
+                <td id=""T_602fdc04_7ea1_11e6_a668_485b393e1884row0_col0"" class=""data row0 col0"">
+                    19883461
+                
+                <td id=""T_602fdc04_7ea1_11e6_a668_485b393e1884row0_col1"" class=""data row0 col1"">
+                    =
+                
+                <td id=""T_602fdc04_7ea1_11e6_a668_485b393e1884row0_col2"" class=""data row0 col2"">
+                    10
+                
+            </tr>
+            
+        </tbody>
+        </table>
+        <br />IC50<br />
+        <style  type=""text/css"" >
+        
+        
+        </style>
+
+        <table id=""T_60383b9c_7ea1_11e6_a668_485b393e1884"" None>
+        
+
+        <thead>
+            
+            <tr>
+                
+                <th class=""blank"">
+                
+                <th class=""col_heading level0 col0"">pubmed_id
+                
+                <th class=""col_heading level0 col1"">relation
+                
+                <th class=""col_heading level0 col2"">IC50
+                
+            </tr>
+            
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <th id=""T_60383b9c_7ea1_11e6_a668_485b393e1884"" class=""row_heading level2 row0"">
+                    0
+                
+                <td id=""T_60383b9c_7ea1_11e6_a668_485b393e1884row0_col0"" class=""data row0 col0"">
+                    0
+                
+                <td id=""T_60383b9c_7ea1_11e6_a668_485b393e1884row0_col1"" class=""data row0 col1"">
+                    =
+                
+                <td id=""T_60383b9c_7ea1_11e6_a668_485b393e1884row0_col2"" class=""data row0 col2"">
+                    50
+                
+            </tr>
+            
+            <tr>
+                
+                <th id=""T_60383b9c_7ea1_11e6_a668_485b393e1884"" class=""row_heading level2 row1"">
+                    1
+                
+                <td id=""T_60383b9c_7ea1_11e6_a668_485b393e1884row1_col0"" class=""data row1 col0"">
+                    1671420
+                
+                <td id=""T_60383b9c_7ea1_11e6_a668_485b393e1884row1_col1"" class=""data row1 col1"">
+                    =
+                
+                <td id=""T_60383b9c_7ea1_11e6_a668_485b393e1884row1_col2"" class=""data row1 col2"">
+                    40
+                
+            </tr>
+            
+            <tr>
+                
+                <th id=""T_60383b9c_7ea1_11e6_a668_485b393e1884"" class=""row_heading level2 row2"">
+                    2
+                
+                <td id=""T_60383b9c_7ea1_11e6_a668_485b393e1884row2_col0"" class=""data row2 col0"">
+                    2002463
+                
+                <td id=""T_60383b9c_7ea1_11e6_a668_485b393e1884row2_col1"" class=""data row2 col1"">
+                    =
+                
+                <td id=""T_60383b9c_7ea1_11e6_a668_485b393e1884row2_col2"" class=""data row2 col2"">
+                    200
+                
+            </tr>
+            
+            <tr>
+                
+                <th id=""T_60383b9c_7ea1_11e6_a668_485b393e1884"" class=""row_heading level2 row3"">
+                    3
+                
+                <td id=""T_60383b9c_7ea1_11e6_a668_485b393e1884row3_col0"" class=""data row3 col0"">
+                    2016721
+                
+                <td id=""T_60383b9c_7ea1_11e6_a668_485b393e1884row3_col1"" class=""data row3 col1"">
+                    =
+                
+                <td id=""T_60383b9c_7ea1_11e6_a668_485b393e1884row3_col2"" class=""data row3 col2"">
+                    200
+                
+            </tr>
+            
+            <tr>
+                
+                <th id=""T_60383b9c_7ea1_11e6_a668_485b393e1884"" class=""row_heading level2 row4"">
+                    4
+                
+                <td id=""T_60383b9c_7ea1_11e6_a668_485b393e1884row4_col0"" class=""data row4 col0"">
+                    2754709
+                
+                <td id=""T_60383b9c_7ea1_11e6_a668_485b393e1884row4_col1"" class=""data row4 col1"">
+                    =
+                
+                <td id=""T_60383b9c_7ea1_11e6_a668_485b393e1884row4_col2"" class=""data row4 col2"">
+                    200
+                
+            </tr>
+            
+            <tr>
+                
+                <th id=""T_60383b9c_7ea1_11e6_a668_485b393e1884"" class=""row_heading level2 row5"">
+                    5
+                
+                <td id=""T_60383b9c_7ea1_11e6_a668_485b393e1884row5_col0"" class=""data row5 col0"">
+                    9599246
+                
+                <td id=""T_60383b9c_7ea1_11e6_a668_485b393e1884row5_col1"" class=""data row5 col1"">
+                    =
+                
+                <td id=""T_60383b9c_7ea1_11e6_a668_485b393e1884row5_col2"" class=""data row5 col2"">
+                    94
+                
+            </tr>
+            
+        </tbody>
+        </table>
+        "
+CHEMBL293773,0.0,0.0,"Ki<br />
+        <style  type=""text/css"" >
+        
+        
+        </style>
+
+        <table id=""T_60412af4_7ea1_11e6_a668_485b393e1884"" None>
+        
+
+        <thead>
+            
+            <tr>
+                
+                <th class=""blank"">
+                
+                <th class=""col_heading level0 col0"">pubmed_id
+                
+                <th class=""col_heading level0 col1"">relation
+                
+                <th class=""col_heading level0 col2"">Ki
+                
+            </tr>
+            
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <th id=""T_60412af4_7ea1_11e6_a668_485b393e1884"" class=""row_heading level2 row0"">
+                    0
+                
+                <td id=""T_60412af4_7ea1_11e6_a668_485b393e1884row0_col0"" class=""data row0 col0"">
+                    0
+                
+                <td id=""T_60412af4_7ea1_11e6_a668_485b393e1884row0_col1"" class=""data row0 col1"">
+                    =
+                
+                <td id=""T_60412af4_7ea1_11e6_a668_485b393e1884row0_col2"" class=""data row0 col2"">
+                    1
+                
+            </tr>
+            
+        </tbody>
+        </table>
+        <br />IC50<br />
+        <style  type=""text/css"" >
+        
+        
+        </style>
+
+        <table id=""T_6049aefe_7ea1_11e6_a668_485b393e1884"" None>
+        
+
+        <thead>
+            
+            <tr>
+                
+                <th class=""blank"">
+                
+                <th class=""col_heading level0 col0"">pubmed_id
+                
+                <th class=""col_heading level0 col1"">relation
+                
+                <th class=""col_heading level0 col2"">IC50
+                
+            </tr>
+            
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <th id=""T_6049aefe_7ea1_11e6_a668_485b393e1884"" class=""row_heading level2 row0"">
+                    0
+                
+                <td id=""T_6049aefe_7ea1_11e6_a668_485b393e1884row0_col0"" class=""data row0 col0"">
+                    0
+                
+                <td id=""T_6049aefe_7ea1_11e6_a668_485b393e1884row0_col1"" class=""data row0 col1"">
+                    =
+                
+                <td id=""T_6049aefe_7ea1_11e6_a668_485b393e1884row0_col2"" class=""data row0 col2"">
+                    1
+                
+            </tr>
+            
+        </tbody>
+        </table>
+        "
+CHEMBL297624,2.01283722471,3.17609125906,"Ki<br />
+        <style  type=""text/css"" >
+        
+        
+        </style>
+
+        <table id=""T_6051e916_7ea1_11e6_a668_485b393e1884"" None>
+        
+
+        <thead>
+            
+            <tr>
+                
+                <th class=""blank"">
+                
+                <th class=""col_heading level0 col0"">pubmed_id
+                
+                <th class=""col_heading level0 col1"">relation
+                
+                <th class=""col_heading level0 col2"">Ki
+                
+            </tr>
+            
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <th id=""T_6051e916_7ea1_11e6_a668_485b393e1884"" class=""row_heading level2 row0"">
+                    0
+                
+                <td id=""T_6051e916_7ea1_11e6_a668_485b393e1884row0_col0"" class=""data row0 col0"">
+                    1404229
+                
+                <td id=""T_6051e916_7ea1_11e6_a668_485b393e1884row0_col1"" class=""data row0 col1"">
+                    =
+                
+                <td id=""T_6051e916_7ea1_11e6_a668_485b393e1884row0_col2"" class=""data row0 col2"">
+                    103
+                
+            </tr>
+            
+        </tbody>
+        </table>
+        <br />IC50<br />
+        <style  type=""text/css"" >
+        
+        
+        </style>
+
+        <table id=""T_605a67bc_7ea1_11e6_a668_485b393e1884"" None>
+        
+
+        <thead>
+            
+            <tr>
+                
+                <th class=""blank"">
+                
+                <th class=""col_heading level0 col0"">pubmed_id
+                
+                <th class=""col_heading level0 col1"">relation
+                
+                <th class=""col_heading level0 col2"">IC50
+                
+            </tr>
+            
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <th id=""T_605a67bc_7ea1_11e6_a668_485b393e1884"" class=""row_heading level2 row0"">
+                    0
+                
+                <td id=""T_605a67bc_7ea1_11e6_a668_485b393e1884row0_col0"" class=""data row0 col0"">
+                    1671420
+                
+                <td id=""T_605a67bc_7ea1_11e6_a668_485b393e1884row0_col1"" class=""data row0 col1"">
+                    =
+                
+                <td id=""T_605a67bc_7ea1_11e6_a668_485b393e1884row0_col2"" class=""data row0 col2"">
+                    1500
+                
+            </tr>
+            
+        </tbody>
+        </table>
+        "
+CHEMBL299944,0.674624318298,0.778151250384,"Ki<br />
+        <style  type=""text/css"" >
+        
+        
+        </style>
+
+        <table id=""T_6062b76e_7ea1_11e6_a668_485b393e1884"" None>
+        
+
+        <thead>
+            
+            <tr>
+                
+                <th class=""blank"">
+                
+                <th class=""col_heading level0 col0"">pubmed_id
+                
+                <th class=""col_heading level0 col1"">relation
+                
+                <th class=""col_heading level0 col2"">Ki
+                
+            </tr>
+            
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <th id=""T_6062b76e_7ea1_11e6_a668_485b393e1884"" class=""row_heading level2 row0"">
+                    0
+                
+                <td id=""T_6062b76e_7ea1_11e6_a668_485b393e1884row0_col0"" class=""data row0 col0"">
+                    0
+                
+                <td id=""T_6062b76e_7ea1_11e6_a668_485b393e1884row0_col1"" class=""data row0 col1"">
+                    =
+                
+                <td id=""T_6062b76e_7ea1_11e6_a668_485b393e1884row0_col2"" class=""data row0 col2"">
+                    6.1
+                
+            </tr>
+            
+            <tr>
+                
+                <th id=""T_6062b76e_7ea1_11e6_a668_485b393e1884"" class=""row_heading level2 row1"">
+                    1
+                
+                <td id=""T_6062b76e_7ea1_11e6_a668_485b393e1884row1_col0"" class=""data row1 col0"">
+                    0
+                
+                <td id=""T_6062b76e_7ea1_11e6_a668_485b393e1884row1_col1"" class=""data row1 col1"">
+                    =
+                
+                <td id=""T_6062b76e_7ea1_11e6_a668_485b393e1884row1_col2"" class=""data row1 col2"">
+                    3.2
+                
+            </tr>
+            
+            <tr>
+                
+                <th id=""T_6062b76e_7ea1_11e6_a668_485b393e1884"" class=""row_heading level2 row2"">
+                    2
+                
+                <td id=""T_6062b76e_7ea1_11e6_a668_485b393e1884row2_col0"" class=""data row2 col0"">
+                    0
+                
+                <td id=""T_6062b76e_7ea1_11e6_a668_485b393e1884row2_col1"" class=""data row2 col1"">
+                    =
+                
+                <td id=""T_6062b76e_7ea1_11e6_a668_485b393e1884row2_col2"" class=""data row2 col2"">
+                    6
+                
+            </tr>
+            
+            <tr>
+                
+                <th id=""T_6062b76e_7ea1_11e6_a668_485b393e1884"" class=""row_heading level2 row3"">
+                    3
+                
+                <td id=""T_6062b76e_7ea1_11e6_a668_485b393e1884row3_col0"" class=""data row3 col0"">
+                    1404229
+                
+                <td id=""T_6062b76e_7ea1_11e6_a668_485b393e1884row3_col1"" class=""data row3 col1"">
+                    =
+                
+                <td id=""T_6062b76e_7ea1_11e6_a668_485b393e1884row3_col2"" class=""data row3 col2"">
+                    3.2
+                
+            </tr>
+            
+            <tr>
+                
+                <th id=""T_6062b76e_7ea1_11e6_a668_485b393e1884"" class=""row_heading level2 row4"">
+                    4
+                
+                <td id=""T_6062b76e_7ea1_11e6_a668_485b393e1884row4_col0"" class=""data row4 col0"">
+                    1404229
+                
+                <td id=""T_6062b76e_7ea1_11e6_a668_485b393e1884row4_col1"" class=""data row4 col1"">
+                    =
+                
+                <td id=""T_6062b76e_7ea1_11e6_a668_485b393e1884row4_col2"" class=""data row4 col2"">
+                    6.3
+                
+            </tr>
+            
+        </tbody>
+        </table>
+        <br />IC50<br />
+        <style  type=""text/css"" >
+        
+        
+        </style>
+
+        <table id=""T_606b5a5e_7ea1_11e6_a668_485b393e1884"" None>
+        
+
+        <thead>
+            
+            <tr>
+                
+                <th class=""blank"">
+                
+                <th class=""col_heading level0 col0"">pubmed_id
+                
+                <th class=""col_heading level0 col1"">relation
+                
+                <th class=""col_heading level0 col2"">IC50
+                
+            </tr>
+            
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <th id=""T_606b5a5e_7ea1_11e6_a668_485b393e1884"" class=""row_heading level2 row0"">
+                    0
+                
+                <td id=""T_606b5a5e_7ea1_11e6_a668_485b393e1884row0_col0"" class=""data row0 col0"">
+                    9599246
+                
+                <td id=""T_606b5a5e_7ea1_11e6_a668_485b393e1884row0_col1"" class=""data row0 col1"">
+                    =
+                
+                <td id=""T_606b5a5e_7ea1_11e6_a668_485b393e1884row0_col2"" class=""data row0 col2"">
+                    6
+                
+            </tr>
+            
+        </tbody>
+        </table>
+        "
+CHEMBL34431,3.28262211288,3.56667313761,"Ki<br />
+        <style  type=""text/css"" >
+        
+        
+        </style>
+
+        <table id=""T_60740a46_7ea1_11e6_a668_485b393e1884"" None>
+        
+
+        <thead>
+            
+            <tr>
+                
+                <th class=""blank"">
+                
+                <th class=""col_heading level0 col0"">pubmed_id
+                
+                <th class=""col_heading level0 col1"">relation
+                
+                <th class=""col_heading level0 col2"">Ki
+                
+            </tr>
+            
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <th id=""T_60740a46_7ea1_11e6_a668_485b393e1884"" class=""row_heading level2 row0"">
+                    0
+                
+                <td id=""T_60740a46_7ea1_11e6_a668_485b393e1884row0_col0"" class=""data row0 col0"">
+                    0
+                
+                <td id=""T_60740a46_7ea1_11e6_a668_485b393e1884row0_col1"" class=""data row0 col1"">
+                    =
+                
+                <td id=""T_60740a46_7ea1_11e6_a668_485b393e1884row0_col2"" class=""data row0 col2"">
+                    1917
+                
+            </tr>
+            
+        </tbody>
+        </table>
+        <br />IC50<br />
+        <style  type=""text/css"" >
+        
+        
+        </style>
+
+        <table id=""T_607c4d00_7ea1_11e6_a668_485b393e1884"" None>
+        
+
+        <thead>
+            
+            <tr>
+                
+                <th class=""blank"">
+                
+                <th class=""col_heading level0 col0"">pubmed_id
+                
+                <th class=""col_heading level0 col1"">relation
+                
+                <th class=""col_heading level0 col2"">IC50
+                
+            </tr>
+            
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <th id=""T_607c4d00_7ea1_11e6_a668_485b393e1884"" class=""row_heading level2 row0"">
+                    0
+                
+                <td id=""T_607c4d00_7ea1_11e6_a668_485b393e1884row0_col0"" class=""data row0 col0"">
+                    0
+                
+                <td id=""T_607c4d00_7ea1_11e6_a668_485b393e1884row0_col1"" class=""data row0 col1"">
+                    =
+                
+                <td id=""T_607c4d00_7ea1_11e6_a668_485b393e1884row0_col2"" class=""data row0 col2"">
+                    3687
+                
+            </tr>
+            
+        </tbody>
+        </table>
+        "
+CHEMBL514432,2.60000308663,2.10720996965,"Ki<br />
+        <style  type=""text/css"" >
+        
+        
+        </style>
+
+        <table id=""T_6084f6f8_7ea1_11e6_a668_485b393e1884"" None>
+        
+
+        <thead>
+            
+            <tr>
+                
+                <th class=""blank"">
+                
+                <th class=""col_heading level0 col0"">pubmed_id
+                
+                <th class=""col_heading level0 col1"">relation
+                
+                <th class=""col_heading level0 col2"">Ki
+                
+            </tr>
+            
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <th id=""T_6084f6f8_7ea1_11e6_a668_485b393e1884"" class=""row_heading level2 row0"">
+                    0
+                
+                <td id=""T_6084f6f8_7ea1_11e6_a668_485b393e1884row0_col0"" class=""data row0 col0"">
+                    19883461
+                
+                <td id=""T_6084f6f8_7ea1_11e6_a668_485b393e1884row0_col1"" class=""data row0 col1"">
+                    =
+                
+                <td id=""T_6084f6f8_7ea1_11e6_a668_485b393e1884row0_col2"" class=""data row0 col2"">
+                    398.11
+                
+            </tr>
+            
+        </tbody>
+        </table>
+        <br />IC50<br />
+        <style  type=""text/css"" >
+        
+        
+        </style>
+
+        <table id=""T_608dada2_7ea1_11e6_a668_485b393e1884"" None>
+        
+
+        <thead>
+            
+            <tr>
+                
+                <th class=""blank"">
+                
+                <th class=""col_heading level0 col0"">pubmed_id
+                
+                <th class=""col_heading level0 col1"">relation
+                
+                <th class=""col_heading level0 col2"">IC50
+                
+            </tr>
+            
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <th id=""T_608dada2_7ea1_11e6_a668_485b393e1884"" class=""row_heading level2 row0"">
+                    0
+                
+                <td id=""T_608dada2_7ea1_11e6_a668_485b393e1884row0_col0"" class=""data row0 col0"">
+                    9871752
+                
+                <td id=""T_608dada2_7ea1_11e6_a668_485b393e1884row0_col1"" class=""data row0 col1"">
+                    =
+                
+                <td id=""T_608dada2_7ea1_11e6_a668_485b393e1884row0_col2"" class=""data row0 col2"">
+                    128
+                
+            </tr>
+            
+        </tbody>
+        </table>
+        "
