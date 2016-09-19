@@ -1,0 +1,104 @@
+---
+layout: default
+title: Vischem
+permalink: vischem.html
+---
+
+
+<cells>
+
+  <div class="colcell">
+    <main id="plotly">
+    </main>
+    <aside>
+      <div id="hoverinfo", style="height: 200px; border: 1px; border-color: black;">
+        <img src="http://users.capdnet.ii.uj.edu.pl/~jastrzebski/plotly_host/mol_img/CHEMBL2.png"></img>
+      </div>
+      <select id="f_name">
+      </select>
+    </aside>
+  </div>
+</cells>
+
+<script>
+  function makeplot(name) {
+    Plotly.d3.csv("http://users.capdnet.ii.uj.edu.pl/~jastrzebski/plotly_host/" + fmap[name], function(data){ processData(name, data) } );
+  };
+
+  // Maps generated using plotting/plotting.ipynb
+  cmap = {"1978": [0.19215686619281769, 0.21176470816135406, 0.58431375026702881, 1.0], "1979": [0.19215686619281769, 0.21176470816135406, 0.58431375026702881, 1.0], "1980": [0.19215686619281769, 0.21176470816135406, 0.58431375026702881, 1.0], "1981": [0.19215686619281769, 0.21176470816135406, 0.58431375026702881, 1.0], "1982": [0.19215686619281769, 0.21176470816135406, 0.58431375026702881, 1.0], "1983": [0.31757014905291875, 0.5148019736063244, 0.73487120243916793, 1.0], "1984": [0.31757014905291875, 0.5148019736063244, 0.73487120243916793, 1.0], "1985": [0.31757014905291875, 0.5148019736063244, 0.73487120243916793, 1.0], "1986": [0.31757014905291875, 0.5148019736063244, 0.73487120243916793, 1.0], "1987": [0.31757014905291875, 0.5148019736063244, 0.73487120243916793, 1.0], "1988": [0.56485968018118948, 0.7663975529283894, 0.86758939636894861, 1.0], "1989": [0.56485968018118948, 0.7663975529283894, 0.86758939636894861, 1.0], "1990": [0.56485968018118948, 0.7663975529283894, 0.86758939636894861, 1.0], "1991": [0.56485968018118948, 0.7663975529283894, 0.86758939636894861, 1.0], "1992": [0.56485968018118948, 0.7663975529283894, 0.86758939636894861, 1.0], "1993": [0.82952714718475329, 0.92895042365535518, 0.95870820069395812, 1.0], "1994": [0.82952714718475329, 0.92895042365535518, 0.95870820069395812, 1.0], "1995": [0.82952714718475329, 0.92895042365535518, 0.95870820069395812, 1.0], "1996": [0.82952714718475329, 0.92895042365535518, 0.95870820069395812, 1.0], "1997": [0.82952714718475329, 0.92895042365535518, 0.95870820069395812, 1.0], "1998": [0.99992310649750094, 0.99761630142252977, 0.74540562818527956, 1.0], "1999": [0.99992310649750094, 0.99761630142252977, 0.74540562818527956, 1.0], "2000": [0.99992310649750094, 0.99761630142252977, 0.74540562818527956, 1.0], "2001": [0.99992310649750094, 0.99761630142252977, 0.74540562818527956, 1.0], "2002": [0.99992310649750094, 0.99761630142252977, 0.74540562818527956, 1.0], "2003": [0.99500192233756246, 0.82460591635856206, 0.51410996448713875, 1.0], "2004": [0.99500192233756246, 0.82460591635856206, 0.51410996448713875, 1.0], "2005": [0.99500192233756246, 0.82460591635856206, 0.51410996448713875, 1.0], "2006": [0.99500192233756246, 0.82460591635856206, 0.51410996448713875, 1.0], "2007": [0.99500192233756246, 0.82460591635856206, 0.51410996448713875, 1.0], "2008": [0.97347174068223274, 0.54740483716834987, 0.31810842222408564, 1.0], "2009": [0.97347174068223274, 0.54740483716834987, 0.31810842222408564, 1.0], "2010": [0.97347174068223274, 0.54740483716834987, 0.31810842222408564, 1.0], "2011": [0.97347174068223274, 0.54740483716834987, 0.31810842222408564, 1.0], "2012": [0.97347174068223274, 0.54740483716834987, 0.31810842222408564, 1.0], "2013": [0.86766628802670576, 0.23983083378118267, 0.17662438083868298, 1.0], "2014": [0.86766628802670576, 0.23983083378118267, 0.17662438083868298, 1.0], "2015": [0.86766628802670576, 0.23983083378118267, 0.17662438083868298, 1.0]}
+fmap = {"Monoamine receptor (only active)": "csv_tsne_best/t-SNE_Monoamine receptor_only_active_True_32000.0.csv", "Serotonin receptor (only active) + drugbank": "csv_tsne_drugbank_best/t-SNE_Serotonin receptor_only_active_True_10000.0.csv", "5-HT2c (only active) + drugbank": "csv_tsne_drugbank_best/t-SNE_5-HT2c_only_active_True_10000.0.csv", "Monoamine receptor (only active) + drugbank": "csv_tsne_drugbank_best/t-SNE_Monoamine receptor_only_active_True_32000.0.csv", "5-HT6 (only active) + drugbank": "csv_tsne_drugbank_best/t-SNE_5-HT6_only_active_True_10000.0.csv", "5-HT1b (only active) + drugbank": "csv_tsne_drugbank_best/t-SNE_5-HT1b_only_active_True_3200.0.csv", "5-HT1d (only active)": "csv_tsne_best/t-SNE_5-HT1d_only_active_True_1000.0.csv", "5-HT5a (only active)": "csv_tsne_best/t-SNE_5-HT5a_only_active_True_100.0.csv", "5-HT2a (only active) + drugbank": "csv_tsne_drugbank_best/t-SNE_5-HT2a_only_active_True_10000.0.csv", "5-HT2c (only active)": "csv_tsne_best/t-SNE_5-HT2c_only_active_True_3200.0.csv", "5-HT7 (only active) + drugbank": "csv_tsne_drugbank_best/t-SNE_5-HT7_only_active_True_3200.0.csv", "5-HT1f (only active) + drugbank": "csv_tsne_drugbank_best/t-SNE_5-HT1f_only_active_True_3200.0.csv", "5-HT1e (only active) + drugbank": "csv_tsne_drugbank_best/t-SNE_5-HT1e_only_active_True_3200.0.csv", "5-HT4 (only active) + drugbank": "csv_tsne_drugbank_best/t-SNE_5-HT4_only_active_True_3200.0.csv", "5-HT2a (only active)": "csv_tsne_best/t-SNE_5-HT2a_only_active_True_10000.0.csv", "5-HT6 (only active)": "csv_tsne_best/t-SNE_5-HT6_only_active_True_3200.0.csv", "5-HT1e (only active)": "csv_tsne_best/t-SNE_5-HT1e_only_active_False_100.0.csv", "5-HT1b (only active)": "csv_tsne_best/t-SNE_5-HT1b_only_active_True_1000.0.csv", "5-HT5b (only active) + drugbank": "csv_tsne_drugbank_best/t-SNE_5-HT5b_only_active_True_3200.0.csv", "5-HT2b (only active)": "csv_tsne_best/t-SNE_5-HT2b_only_active_True_1000.0.csv", "Family A G protein-coupled receptor (only active)": "csv_tsne_best/t-SNE_Family A G protein-coupled receptor_only_active_True_32000.0.csv", "Serotonin receptor (only active)": "csv_tsne_best/t-SNE_Serotonin receptor_only_active_True_10000.0.csv", "5-HT1a (only active) + drugbank": "csv_tsne_drugbank_best/t-SNE_5-HT1a_only_active_True_10000.0.csv", "5-HT1f (only active)": "csv_tsne_best/t-SNE_5-HT1f_only_active_True_100.0.csv", "5-HT5a (only active) + drugbank": "csv_tsne_drugbank_best/t-SNE_5-HT5a_only_active_True_3200.0.csv", "5-HT7 (only active)": "csv_tsne_best/t-SNE_5-HT7_only_active_True_1000.0.csv", "5-HT4 (only active)": "csv_tsne_best/t-SNE_5-HT4_only_active_True_1000.0.csv", "5-HT1a (only active)": "csv_tsne_best/t-SNE_5-HT1a_only_active_True_10000.0.csv", "5-HT1d (only active) + drugbank": "csv_tsne_drugbank_best/t-SNE_5-HT1d_only_active_True_3200.0.csv", "5-HT2b (only active) + drugbank": "csv_tsne_drugbank_best/t-SNE_5-HT2b_only_active_True_3200.0.csv"}
+
+
+  var files_select = document.getElementById('f_name');
+  var keys = Object.keys(fmap);
+  keys.sort()
+  for (var i = 0; i < keys.length; i++) {
+     var opt = document.createElement("option");
+     opt.value = keys[i];
+     opt.innerHTML = keys[i]; // whatever property it has
+     files_select.appendChild(opt);
+  }
+
+  function yearToRgb(year) {
+    if (year == 0){
+      return 'rgb(0, 0, 0)'
+    } else {
+      return 'rgb(' + parseInt(255*cmap[year][0]) + ',' + parseInt(255*cmap[year][1]) + "," + parseInt(255*cmap[year][2]) + ')'
+    }
+  }
+
+  function processData(f_name, allRows) {
+    var x = [], y = [], text = [], color = [], chemblid = []
+    for (var i=0; i<allRows.length; i++) {
+      row = allRows[i];
+      x.push( row['x'] );
+      y.push( row['y'] );
+      color.push( yearToRgb(row['year']))
+      chemblid.push(row['']),
+      text.push( row[''] + " year=" + row['year'] );
+    }
+    scatter( f_name, x, y, chemblid,  text, color );
+  }
+
+  function scatter( f_name, x, y, chemblid, text, color ){
+      var traces = [{
+        x: x,
+        y: y,
+        hoverinfo: "text",
+        text: text,
+        marker: {
+              size: '6',
+              color: color
+          },
+            showscale: true,
+        mode: 'markers'
+      }];
+
+      Plotly.newPlot('plotly', traces,
+        {
+          title: f_name,
+          height: 800,
+          margin: {pad: 0},
+          hovermode:'closest', 
+          xaxis: {showgrid: false, showticklabels:false}, 
+          yaxis: {showgrid: false, showticklabels:false}, 
+          paper_bgcolor: 'rgba(0,0,0,0)', 
+          plot_bgcolor: 'rgba(0, 0, 0, 0.0)'
+        });
+
+      var myPlot = document.getElementById('plotly');
+      var hoverInfo = document.getElementById('hoverinfo'); 
+
+      myPlot.on('plotly_hover', function(data){
+        var infotext = data.points.map(function(d){
+          return d['pointNumber']
+        });
+        hoverInfo.innerHTML = "<img src='http://users.capdnet.ii.uj.edu.pl/~jastrzebski/plotly_host/mol_img/" + chemblid[infotext] + ".png'>"
+    })
+     .on('plotly_unhover', function(data){
+    });
+  };
+  files_select.onchange = function() { Plotly.deleteTraces('plotly', 0); makeplot(files_select.options[files_select.selectedIndex].text)};
+  makeplot("5-HT5a (only active) + drugbank");
+</script>
