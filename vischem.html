@@ -22,7 +22,7 @@ permalink: vischem.html
 
 <script>
   function makeplot(name) {
-    Plotly.d3.csv("http://users.capdnet.ii.uj.edu.pl/~jastrzebski/plotly_host/" + fmap[name], function(data){ processData(name, data) } );
+    Plotly.d3.csv("assets/vischem/" + fmap[name], function(data){ processData(name, data) } );
   };
 
   // Maps generated using plotting/plotting.ipynb
