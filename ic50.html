@@ -95,7 +95,9 @@ fmap.sort()
 
       myPlot.on('plotly_hover', function(eventData){
         console.log(eventData.points[0].pointNumber)
-        hoverInfo.innerHTML = table[eventData.points[0].pointNumber]
+        if(eventData.points[0].curveNumber == 0){
+          hoverInfo.innerHTML = table[eventData.points[0].pointNumber]
+        }
     })
      .on('plotly_unhover', function(data){
     });
