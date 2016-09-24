@@ -14,7 +14,7 @@ permalink: vischem.html
       <br><br>
       Compound:
       <div id="hoverinfo", style="height: 200px; border: 1px; border-color: black;">
-        <img src="http://gmum.net/vischem/mol_img/CHEMBL2.png"></img>
+        <img src="http://gmum.net/mol_img/CHEMBL2.png"></img>
       </div>
       <br><br>
       Select dataset:
@@ -97,7 +97,7 @@ fmap = {"Monoamine receptor (only active)": "csv_tsne_best/t-SNE_Monoamine recep
         var infotext = data.points.map(function(d){
           return d['pointNumber']
         });
-        hoverInfo.innerHTML = "<img src='http://gmum.net/files/vischem/mol_img/" + chemblid[infotext] + ".png'> <p>" + text[infotext] + "</p>"
+        hoverInfo.innerHTML = "<img src='http://gmum.net/files/mol_img/" + chemblid[infotext] + ".png'> <p>" + text[infotext] + "</p>"
     })
      .on('plotly_unhover', function(data){
     });
