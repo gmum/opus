@@ -22,10 +22,6 @@ permalink: clustering.html
       <br><br><br><br><br><br><br>
       Select clustering:
       <select id="clustering">
-      <option name="0" value="0">0</option>
-      <option name="1" value="1">1</option>
-      <option name="2" value="2">2</option>
-      <option name="3" value="3">3</option>
       </select>
     </aside>
   </div>
@@ -50,10 +46,81 @@ fmap.sort()
      files_select.appendChild(opt);
   }
 
-  var clusterings = [ [], [], [], [] ];
-  var clusterings_color = [ [], [], [], [] ];
-  var clustering_to_id = {"bac": 0, "bac_gtc": 1, "bac_murcko": 2, "bac_murcko_generic": 3}
-  var id_to_clustering = {0: "bac", 1: "bac_gtc", 2: "bac_murcko", 3: "bac_murcko_generic"}
+  var clusterings = [];
+  var clusterings_color = [];
+  var clusterings_list = ["('MACCS', 'bac')",
+ "('MACCS', 'bac_gtc')",
+ "('MACCS', 'bac_murcko')",
+ "('MACCS', 'bac_murcko_generic')",
+ "('KR', 'bac')",
+ "('KR', 'bac_gtc')",
+ "('KR', 'bac_murcko')",
+ "('KR', 'bac_murcko_generic')",
+ "('MolPrint2D', 'bac')",
+ "('MolPrint2D', 'bac_gtc')",
+ "('MolPrint2D', 'bac_murcko')",
+ "('MolPrint2D', 'bac_murcko_generic')",
+ "('EState', 'bac')",
+ "('EState', 'bac_gtc')",
+ "('EState', 'bac_murcko')",
+ "('EState', 'bac_murcko_generic')",
+ "('AllSMILESNgram', 'bac')",
+ "('AllSMILESNgram', 'bac_gtc')",
+ "('AllSMILESNgram', 'bac_murcko')",
+ "('AllSMILESNgram', 'bac_murcko_generic')",
+ "('ShortestPathCycles', 'bac')",
+ "('ShortestPathCycles', 'bac_gtc')",
+ "('ShortestPathCycles', 'bac_murcko')",
+ "('ShortestPathCycles', 'bac_murcko_generic')"];
+
+  var id_to_clustering = {0: "('MACCS', 'bac')",
+ 1: "('MACCS', 'bac_gtc')",
+ 2: "('MACCS', 'bac_murcko')",
+ 3: "('MACCS', 'bac_murcko_generic')",
+ 4: "('KR', 'bac')",
+ 5: "('KR', 'bac_gtc')",
+ 6: "('KR', 'bac_murcko')",
+ 7: "('KR', 'bac_murcko_generic')",
+ 8: "('MolPrint2D', 'bac')",
+ 9: "('MolPrint2D', 'bac_gtc')",
+ 10: "('MolPrint2D', 'bac_murcko')",
+ 11: "('MolPrint2D', 'bac_murcko_generic')",
+ 12: "('EState', 'bac')",
+ 13: "('EState', 'bac_gtc')",
+ 14: "('EState', 'bac_murcko')",
+ 15: "('EState', 'bac_murcko_generic')",
+ 16: "('AllSMILESNgram', 'bac')",
+ 17: "('AllSMILESNgram', 'bac_gtc')",
+ 18: "('AllSMILESNgram', 'bac_murcko')",
+ 19: "('AllSMILESNgram', 'bac_murcko_generic')",
+ 20: "('ShortestPathCycles', 'bac')",
+ 21: "('ShortestPathCycles', 'bac_gtc')",
+ 22: "('ShortestPathCycles', 'bac_murcko')",
+ 23: "('ShortestPathCycles', 'bac_murcko_generic')"};
+  var clustering_to_id = {"('AllSMILESNgram', 'bac')": 16,
+ "('AllSMILESNgram', 'bac_gtc')": 17,
+ "('AllSMILESNgram', 'bac_murcko')": 18,
+ "('AllSMILESNgram', 'bac_murcko_generic')": 19,
+ "('EState', 'bac')": 12,
+ "('EState', 'bac_gtc')": 13,
+ "('EState', 'bac_murcko')": 14,
+ "('EState', 'bac_murcko_generic')": 15,
+ "('KR', 'bac')": 4,
+ "('KR', 'bac_gtc')": 5,
+ "('KR', 'bac_murcko')": 6,
+ "('KR', 'bac_murcko_generic')": 7,
+ "('MACCS', 'bac')": 0,
+ "('MACCS', 'bac_gtc')": 1,
+ "('MACCS', 'bac_murcko')": 2,
+ "('MACCS', 'bac_murcko_generic')": 3,
+ "('MolPrint2D', 'bac')": 8,
+ "('MolPrint2D', 'bac_gtc')": 9,
+ "('MolPrint2D', 'bac_murcko')": 10,
+ "('MolPrint2D', 'bac_murcko_generic')": 11,
+ "('ShortestPathCycles', 'bac')": 20,
+ "('ShortestPathCycles', 'bac_gtc')": 21,
+ "('ShortestPathCycles', 'bac_murcko')": 22,
+ "('ShortestPathCycles', 'bac_murcko_generic')": 23};
 
 
   function clusterToRgb(cluster) {
@@ -62,18 +129,23 @@ fmap.sort()
 
   function processData(f_name, allRows) {
     var x = [], y = [], text = [], color = [], chemblid = []
-    clusterings = [ [], [], [], [] ];
-    clusterings_color = [ [], [], [], [] ];
+    clusterings = [];
+    clusterings_color = [];
+    for(var i=0; i<clusterings_list.length;i++){
+      clusterings.push([]);
+      clusterings_color.push([]);
+    }
 
     for (var i=0; i<allRows.length; i++) {
       row = allRows[i];
-      console.log(row);
       x.push( row['x'] );
       y.push( row['y'] );
       text.push( row[''] );
       
       for (var j=0; j<clusterings.length; j++){
       	clusterings[j].push( row[id_to_clustering[j]] );
+        // console.log(row[id_to_clustering[j]]);
+        // console.log(clusterToRgb(row[id_to_clustering[j]]));
       	clusterings_color[j].push( clusterToRgb(row[id_to_clustering[j]]) );
       }
     }
@@ -81,7 +153,7 @@ fmap.sort()
     console.log(x);
     console.log(y);
     console.log(text);
-    scatter( f_name, x, y, chemblid,  text, clusterings_color[clustering_select.options[clustering_select.selectedIndex].text] );
+    scatter( f_name, x, y, chemblid,  text, clusterings_color[clustering_to_id[clustering_select.options[clustering_select.selectedIndex].text]] );
   }
 
   function scatter( f_name, x, y, chemblid, text, color ){
@@ -116,9 +188,17 @@ fmap.sort()
         var infotext = data.points.map(function(d){
           return d['pointNumber']
         });
-        hoverInfo.innerHTML = "<img src='http://users.capdnet.ii.uj.edu.pl/~jastrzebski/plotly_host/mol_img/" + text[infotext] + ".png'> <p>" + text[infotext] + "</p>"
+        hoverInfo.innerHTML = "<img src='http://gmum.net/files/mol_img/" + text[infotext] + ".png'> <p>" + text[infotext] + "</p>"
     })
   };
+
+  for (var i = 0; i < clusterings_list.length; i++) {
+     var opt = document.createElement("option");
+     opt.value = clusterings_list[i];
+     opt.innerHTML = clusterings_list[i]; // whatever property it has
+     clustering_select.appendChild(opt);
+  }
+
   files_select.onchange = function() { Plotly.deleteTraces('plotly', 0); makeplot(files_select.options[files_select.selectedIndex].text)};
   clustering_select.onchange = function() { Plotly.deleteTraces('plotly', 0); makeplot(files_select.options[files_select.selectedIndex].text)};
   makeplot("clustering/5-HT1A.csv");
