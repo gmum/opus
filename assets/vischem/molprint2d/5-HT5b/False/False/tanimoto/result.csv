@@ -1,0 +1,3 @@
+,x,y,in_dataset,in_drugbank,year,extra_tooltip
+CHEMBL2103778,-68.1548326657,93.1885293479,True,False,1993.0,"year: 1993, median Ki: 10000.0, median IC50: N/A, median EC50: N/A, median AC50: N/A"
+CHEMBL46,68.1547352168,-93.1885958559,True,True,1993.0,"year: 1993, median Ki: 10000.0, median IC50: N/A, median EC50: N/A, median AC50: N/A"
