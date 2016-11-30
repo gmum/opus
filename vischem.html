@@ -12,14 +12,19 @@ permalink: vischem.html
     </main>
     <aside>
       <br><br>
+        <div>
+          Select dataset:
+        <select id="f_name">
+        </select>
+        </div>
+      <br><br>
       Compound:
       <div id="hoverinfo", style="height: 200px; border: 1px; border-color: black;">
-        <img src="http://gmum.net/mol_img/CHEMBL2.png"></img>
+        <img src="http://gmum.net/mol_img/CHEMBL100.png"></img>
       </div>
-      <br><br>
-      Select dataset:
-      <select id="f_name">
-      </select>
+
+
+
     </aside>
   </div>
 </cells>
@@ -62,11 +67,12 @@ permalink: vischem.html
       }
       row = allRows[i];
       x.push( row['x'] );
-      side_text.push( row[''] + " year=" + row['year'] );
+      text.push( row[''] + " year=" +  parseInt(row['year'], 10) );
       y.push( row['y'] );
       color.push( yearToRgb(row['year']))
       chemblid.push(row['']);
-      text.push( row['extra_tooltip'].replace(",median", "<br>,median") );
+
+      side_text.push(row['extra_tooltip']);
     }
     scatter( f_name, x, y, chemblid,  text, color, side_text );
   }
@@ -104,7 +110,16 @@ permalink: vischem.html
         var infotext = data.points.map(function(d){
           return d['pointNumber'];
         });
-        hoverInfo.innerHTML = "<img src='http://gmum.net/files/mol_img/" + chemblid[infotext] + ".png'> <p>" + side_text[infotext] + "</p>"
+          tooltip_tokens = side_text[infotext].split(",");
+          side_text_parsed = ""
+          console.log(i);
+          for(i=0; i<tooltip_tokens.length; ++i){
+            value = tooltip_tokens[i].split(":")[1].trim()
+            if(value != "N/A"){
+              side_text_parsed += tooltip_tokens[i] + "<br>"
+            }
+          }
+        hoverInfo.innerHTML = "<img src='http://gmum.net/files/mol_img/" + chemblid[infotext] + ".png'>" + side_text_parsed
     })
      .on('plotly_unhover', function(data){
     });
@@ -117,5 +132,5 @@ permalink: vischem.html
     }
     makeplot(files_select.options[files_select.selectedIndex].text)
   };
-  makeplot("5-HT1a molprint2d/tanimoto");
+  makeplot("5-HT1d only active molprint2d/tanimoto");
 </script>
