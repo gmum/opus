@@ -1,0 +1,123 @@
+---
+layout: vischem
+title: Vischem Stability
+permalink: vischem_stability.html
+---
+
+
+<cells>
+
+  <div class="colcell">
+    <main id="plotly">
+    </main>
+    <aside>
+      <br><br>
+        <div>
+          Select dataset:
+        <select id="f_name">
+        </select>
+        </div>
+      <br><br>
+      Compound:
+      <div id="hoverinfo", style="height: 200px; border: 1px; border-color: black;">
+        <img src="http://gmum.net/mol_img/CHEMBL100.png"></img>
+      </div>
+    </aside>
+  </div>
+</cells>
+
+<script>
+//,x,y,in_dataset,in_drugbank,year,extra_tooltip
+
+  function makeplot(name) {
+    Plotly.d3.csv("assets/" + fmap[name] + "/result.csv", function(data){ processData(name, data) } );
+  };
+
+  // Maps generated using plotting/plotting.ipynb
+  fmap = {"Mean + Std ACM4 all": "vischem_stability/mean_std/ACM4/all", "Std beta2 3KJ6": "vischem_stability/std/beta2/3KJ6", "Mean + Std beta1 2VT4": "vischem_stability/mean_std/beta1/2VT4", "Mean + Std 5-HT2C 6BQH": "vischem_stability/mean_std/5-HT2C/6BQH", "Mean + Std 5-HT2C 6BQG": "vischem_stability/mean_std/5-HT2C/6BQG", "Std beta2 5D5B": "vischem_stability/std/beta2/5D5B", "Std H1 3RZE": "vischem_stability/std/H1/3RZE", "Mean + Std beta2 all": "vischem_stability/mean_std/beta2/all", "Mean + Std beta2 5D6L": "vischem_stability/mean_std/beta2/5D6L", "Std beta2 2RH1": "vischem_stability/std/beta2/2RH1", "Std beta2 2R4R": "vischem_stability/std/beta2/2R4R", "Std D4 all": "vischem_stability/std/D4/all", "Mean + Std beta2 2RH1": "vischem_stability/mean_std/beta2/2RH1", "Std beta1 4GP0": "vischem_stability/std/beta1/4GP0", "Mean + Std 5-HT1B 4IAR": "vischem_stability/mean_std/5-HT1B/4IAR", "Mean + Std 5-HT1B 4IAQ": "vischem_stability/mean_std/5-HT1B/4IAQ", "Std beta1 4AMI": "vischem_stability/std/beta1/4AMI", "Std beta1 4AMJ": "vischem_stability/std/beta1/4AMJ", "Mean + Std D2 6C38": "vischem_stability/mean_std/D2/6C38", "Std beta1 all": "vischem_stability/std/beta1/all", "Mean + Std beta1 all": "vischem_stability/mean_std/beta1/all", "Std D3 3PBL": "vischem_stability/std/D3/3PBL", "Std beta1 2YCW": "vischem_stability/std/beta1/2YCW", "Std D3 all": "vischem_stability/std/D3/all", "Std beta1 2YCX": "vischem_stability/std/beta1/2YCX", "Std beta1 2YCY": "vischem_stability/std/beta1/2YCY", "Std beta1 2YCZ": "vischem_stability/std/beta1/2YCZ", "Std ACM3 4U14": "vischem_stability/std/ACM3/4U14", "Std ACM3 4U15": "vischem_stability/std/ACM3/4U15", "Std ACM3 4U16": "vischem_stability/std/ACM3/4U16", "Std H1 all": "vischem_stability/std/H1/all", "Std beta1 2Y01": "vischem_stability/std/beta1/2Y01", "Std beta1 2Y00": "vischem_stability/std/beta1/2Y00", "Std beta1 2Y03": "vischem_stability/std/beta1/2Y03", "Std beta1 2Y02": "vischem_stability/std/beta1/2Y02", "Mean + Std 5-HT2B 4NC3": "vischem_stability/mean_std/5-HT2B/4NC3", "Mean + Std 5-HT2B 4IB4": "vischem_stability/mean_std/5-HT2B/4IB4", "Mean + Std ACM3 all": "vischem_stability/mean_std/ACM3/all", "Mean + Std beta1 2Y02": "vischem_stability/mean_std/beta1/2Y02", "Mean + Std beta1 2Y03": "vischem_stability/mean_std/beta1/2Y03", "Mean + Std beta1 2Y00": "vischem_stability/mean_std/beta1/2Y00", "Mean + Std beta1 2Y01": "vischem_stability/mean_std/beta1/2Y01", "Std 5-HT2C all": "vischem_stability/std/5-HT2C/all", "Std D4 5WIV": "vischem_stability/std/D4/5WIV", "Std D4 5WIU": "vischem_stability/std/D4/5WIU", "Mean + Std H1 3RZE": "vischem_stability/mean_std/H1/3RZE", "Std beta2 all": "vischem_stability/std/beta2/all", "Std beta1 5A8E": "vischem_stability/std/beta1/5A8E", "Std ACM1 5CXV": "vischem_stability/std/ACM1/5CXV", "Std 5-HT2B 5TVN": "vischem_stability/std/5-HT2B/5TVN", "Mean + Std D3 all": "vischem_stability/mean_std/D3/all", "Std ACM4 all": "vischem_stability/std/ACM4/all", "Mean + Std beta1 4AMJ": "vischem_stability/mean_std/beta1/4AMJ", "Mean + Std beta1 4AMI": "vischem_stability/mean_std/beta1/4AMI", "Std ACM3 4DAJ": "vischem_stability/std/ACM3/4DAJ", "Mean + Std ACM1 all": "vischem_stability/mean_std/ACM1/all", "Mean + Std ACM3 4U15": "vischem_stability/mean_std/ACM3/4U15", "Mean + Std ACM3 4U14": "vischem_stability/mean_std/ACM3/4U14", "Mean + Std ACM3 4U16": "vischem_stability/mean_std/ACM3/4U16", "Mean + Std beta1 5F8U": "vischem_stability/mean_std/beta1/5F8U", "Std 5-HT2B 4NC3": "vischem_stability/std/5-HT2B/4NC3", "Mean + Std D2 all": "vischem_stability/mean_std/D2/all", "Mean + Std ACM3 4DAJ": "vischem_stability/mean_std/ACM3/4DAJ", "Mean + Std 5-HT2B 5TUD": "vischem_stability/mean_std/5-HT2B/5TUD", "Std beta2 5D5A": "vischem_stability/std/beta2/5D5A", "Mean + Std 5-HT1B all": "vischem_stability/mean_std/5-HT1B/all", "Mean + Std D4 5WIV": "vischem_stability/mean_std/D4/5WIV", "Mean + Std 5-HT2C all": "vischem_stability/mean_std/5-HT2C/all", "Std 5-HT2B 4IB4": "vischem_stability/std/5-HT2B/4IB4", "Mean + Std beta2 3KJ6": "vischem_stability/mean_std/beta2/3KJ6", "Std ACM2 3UON": "vischem_stability/std/ACM2/3UON", "Mean + Std ACM2 3UON": "vischem_stability/mean_std/ACM2/3UON", "Mean + Std beta2 3X7D": "vischem_stability/mean_std/beta2/3X7D", "Std ACM3 all": "vischem_stability/std/ACM3/all", "Mean + Std beta2 5D5A": "vischem_stability/mean_std/beta2/5D5A", "Mean + Std beta2 5D5B": "vischem_stability/mean_std/beta2/5D5B", "Std 5-HT1B 5V54": "vischem_stability/std/5-HT1B/5V54", "Std D2 6C38": "vischem_stability/std/D2/6C38", "Std beta2 3D4S": "vischem_stability/std/beta2/3D4S", "Mean + Std 5-HT1B 5V54": "vischem_stability/mean_std/5-HT1B/5V54", "Std beta2 4GBR": "vischem_stability/std/beta2/4GBR", "Std beta2 3NYA": "vischem_stability/std/beta2/3NYA", "Std beta1 2VT4": "vischem_stability/std/beta1/2VT4", "Std beta2 3NY8": "vischem_stability/std/beta2/3NY8", "Mean + Std beta1 4GP0": "vischem_stability/mean_std/beta1/4GP0", "Mean + Std ACM2 4MQT": "vischem_stability/mean_std/ACM2/4MQT", "Mean + Std beta2 3D4S": "vischem_stability/mean_std/beta2/3D4S", "Mean + Std 5-HT2B all": "vischem_stability/mean_std/5-HT2B/all", "Mean + Std beta1 3ZPR": "vischem_stability/mean_std/beta1/3ZPR", "Mean + Std beta1 3ZPQ": "vischem_stability/mean_std/beta1/3ZPQ", "Mean + Std ACM4 5DSG": "vischem_stability/mean_std/ACM4/5DSG", "Std 5-HT1B all": "vischem_stability/std/5-HT1B/all", "Std ACM1 all": "vischem_stability/std/ACM1/all", "Std ACM2 all": "vischem_stability/std/ACM2/all", "Std 5-HT2C 6BQH": "vischem_stability/std/5-HT2C/6BQH", "Std 5-HT2C 6BQG": "vischem_stability/std/5-HT2C/6BQG", "Mean + Std beta1 5A8E": "vischem_stability/mean_std/beta1/5A8E", "Mean + Std ACM1 5CXV": "vischem_stability/mean_std/ACM1/5CXV", "Mean + Std H1 all": "vischem_stability/mean_std/H1/all", "Std beta1 3ZPQ": "vischem_stability/std/beta1/3ZPQ", "Std beta2 5D6L": "vischem_stability/std/beta2/5D6L", "Std beta1 3ZPR": "vischem_stability/std/beta1/3ZPR", "Std beta2 3NY9": "vischem_stability/std/beta2/3NY9", "Std beta2 3PDS": "vischem_stability/std/beta2/3PDS", "Mean + Std beta2 3NYA": "vischem_stability/mean_std/beta2/3NYA", "Std beta2 2R4S": "vischem_stability/std/beta2/2R4S", "Mean + Std D4 all": "vischem_stability/mean_std/D4/all", "Mean + Std beta2 2R4R": "vischem_stability/mean_std/beta2/2R4R", "Mean + Std beta2 2R4S": "vischem_stability/mean_std/beta2/2R4S", "Mean + Std 5-HT2B 5TVN": "vischem_stability/mean_std/5-HT2B/5TVN", "Mean + Std ACM2 all": "vischem_stability/mean_std/ACM2/all", "Mean + Std beta2 4GBR": "vischem_stability/mean_std/beta2/4GBR", "Mean + Std beta1 2YCW": "vischem_stability/mean_std/beta1/2YCW", "Std beta1 5F8U": "vischem_stability/std/beta1/5F8U", "Std ACM2 4MQT": "vischem_stability/std/ACM2/4MQT", "Std ACM2 4MQS": "vischem_stability/std/ACM2/4MQS", "Std 5-HT1B 4IAR": "vischem_stability/std/5-HT1B/4IAR", "Std 5-HT1B 4IAQ": "vischem_stability/std/5-HT1B/4IAQ", "Mean + Std beta1 2YCZ": "vischem_stability/mean_std/beta1/2YCZ", "Mean + Std beta1 2YCY": "vischem_stability/mean_std/beta1/2YCY", "Mean + Std beta1 2YCX": "vischem_stability/mean_std/beta1/2YCX", "Std beta2 3P0G": "vischem_stability/std/beta2/3P0G", "Std ACM4 5DSG": "vischem_stability/std/ACM4/5DSG", "Mean + Std D3 3PBL": "vischem_stability/mean_std/D3/3PBL", "Mean + Std beta2 3NY8": "vischem_stability/mean_std/beta2/3NY8", "Mean + Std beta2 3NY9": "vischem_stability/mean_std/beta2/3NY9", "Std beta2 3X7D": "vischem_stability/std/beta2/3X7D", "Mean + Std D4 5WIU": "vischem_stability/mean_std/D4/5WIU", "Std D2 all": "vischem_stability/std/D2/all", "Std beta1 4BVN": "vischem_stability/std/beta1/4BVN", "Mean + Std beta2 3P0G": "vischem_stability/mean_std/beta2/3P0G", "Std 5-HT2B all": "vischem_stability/std/5-HT2B/all", "Std 5-HT2B 5TUD": "vischem_stability/std/5-HT2B/5TUD", "Mean + Std beta1 4BVN": "vischem_stability/mean_std/beta1/4BVN", "Mean + Std beta2 3PDS": "vischem_stability/mean_std/beta2/3PDS", "Mean + Std ACM2 4MQS": "vischem_stability/mean_std/ACM2/4MQS"}
+  var files_select = document.getElementById('f_name');
+  var keys = Object.keys(fmap);
+  keys.sort()
+  for (var i = 0; i < keys.length; i++) {
+     var opt = document.createElement("option");
+     opt.value = keys[i];
+     opt.innerHTML = keys[i]; // whatever property it has
+     files_select.appendChild(opt);
+  }
+
+  function activityToRgb(activity) {
+    if (activity == 'active'){
+      return 'rgb(0, 0, 0)'
+    } else {
+       return 'rgb(255, 0, 0)'
+    }
+  }
+
+  function processData(f_name, allRows) {
+    var x = [], y = [], text = [], color = [], chemblid = [], side_text = []
+    for (var i=0; i<allRows.length; i++) {
+      if (i == 0) {
+        console.log(allRows[i]);
+      }
+      row = allRows[i];
+      x.push( row['x'] );
+      //text.push( row[''] + " year=" +  parseInt(row['year'], 10) );
+      y.push( row['y'] );
+      color.push( activityToRgb(row['activity']))
+      chemblid.push(row['']);
+
+      side_text.push(row[''] + ' ' + row['extra_tooltip']);
+    }
+    scatter( f_name, x, y, chemblid,  text, color, side_text );
+  }
+
+  function scatter( f_name, x, y, chemblid, text, color, side_text ){
+      var traces = [{
+        x: x,
+        y: y,
+        hoverinfo: "text",
+        text: text,
+        marker: {
+              size: '6',
+              color: color
+          },
+            showscale: true,
+        mode: 'markers'
+      }];
+
+      Plotly.newPlot('plotly', traces,
+        {
+          title: f_name,
+          height: 800,
+          margin: {pad: 0},
+          hovermode:'closest',
+          xaxis: {showgrid: false, showticklabels:false},
+          yaxis: {showgrid: false, showticklabels:false},
+          paper_bgcolor: 'rgba(0,0,0,0)',
+          plot_bgcolor: 'rgba(0, 0, 0, 0.0)'
+        });
+
+      var myPlot = document.getElementById('plotly');
+      var hoverInfo = document.getElementById('hoverinfo');
+
+      myPlot.on('plotly_hover', function(data){
+        var infotext = data.points.map(function(d){
+          return d['pointNumber'];
+        });
+          side_text_parsed = side_text[infotext]
+
+        hoverInfo.innerHTML = "<img src='http://gmum.net/files/mol_img/" + chemblid[infotext] + ".png'>" + side_text_parsed
+    })
+     .on('plotly_unhover', function(data){
+    });
+  };
+  files_select.onchange = function() {
+    try {
+      Plotly.deleteTraces('plotly', 0);
+    } catch (err) {
+      // Nothing
+    }
+    makeplot(files_select.options[files_select.selectedIndex].text)
+  };
+  makeplot("Mean + Std 5-HT2B 4IB4");
+</script>
