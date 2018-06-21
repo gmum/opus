@@ -1,0 +1,123 @@
+---
+layout: vischem
+title: Vischem Patents
+permalink: vischem_patents.html
+---
+
+
+<cells>
+
+  <div class="colcell">
+    <main id="plotly">
+    </main>
+    <aside>
+      <br><br>
+        <div>
+          Select dataset:
+        <select id="f_name">
+        </select>
+        </div>
+      <br><br>
+      Compound:
+      <div id="hoverinfo", style="height: 200px; border: 1px; border-color: black;">
+        <img src="http://gmum.net/mol_img_patent/CHEMBL100.png"></img>
+      </div>
+    </aside>
+  </div>
+</cells>
+
+<script>
+//,x,y,in_dataset,in_drugbank,year,extra_tooltip
+
+  function makeplot(name) {
+    Plotly.d3.csv("assets/patents/" + fmap[name], function(data){ processData(name, data) } );
+  };
+
+  // Maps generated using plotting/plotting.ipynb
+  fmap = {"10000": "10000.csv", "3200": "3200.csv", "32": "32.csv", "320": "320.csv", "100": "100.csv", "32000": "32000.csv", "1000": "1000.csv"}
+  var files_select = document.getElementById('f_name');
+  var keys = Object.keys(fmap);
+  keys.sort()
+  for (var i = 0; i < keys.length; i++) {
+     var opt = document.createElement("option");
+     opt.value = keys[i];
+     opt.innerHTML = keys[i]; // whatever property it has
+     files_select.appendChild(opt);
+  }
+
+  function whichToRgb(which) {
+    if (which == 'drugbank'){
+      return 'rgb(0, 0, 0)'
+    } else {
+       return 'rgb(255, 0, 0)'
+    }
+  }
+
+  function processData(f_name, allRows) {
+    var x = [], y = [], text = [], color = [], chemblid = [], side_text = []
+    for (var i=0; i<allRows.length; i++) {
+      if (i == 0) {
+        console.log(allRows[i]);
+      }
+      row = allRows[i];
+      x.push( row['x'] );
+      //text.push( row[''] + " year=" +  parseInt(row['year'], 10) );
+      y.push( row['y'] );
+      color.push( whichToRgb(row['which']))
+      chemblid.push(row['']);
+
+      side_text.push(row['extra_tooltip']);
+    }
+    scatter( f_name, x, y, chemblid,  text, color, side_text );
+  }
+
+  function scatter( f_name, x, y, chemblid, text, color, side_text ){
+      var traces = [{
+        x: x,
+        y: y,
+        hoverinfo: "text",
+        text: text,
+        marker: {
+              size: '6',
+              color: color
+          },
+            showscale: true,
+        mode: 'markers'
+      }];
+
+      Plotly.newPlot('plotly', traces,
+        {
+          title: f_name,
+          height: 800,
+          margin: {pad: 0},
+          hovermode:'closest',
+          xaxis: {showgrid: false, showticklabels:false},
+          yaxis: {showgrid: false, showticklabels:false},
+          paper_bgcolor: 'rgba(0,0,0,0)',
+          plot_bgcolor: 'rgba(0, 0, 0, 0.0)'
+        });
+
+      var myPlot = document.getElementById('plotly');
+      var hoverInfo = document.getElementById('hoverinfo');
+
+      myPlot.on('plotly_hover', function(data){
+        var infotext = data.points.map(function(d){
+          return d['pointNumber'];
+        });
+          side_text_parsed = side_text[infotext]
+
+        hoverInfo.innerHTML = "<img src='http://gmum.net/files/mol_img_patent/" + chemblid[infotext] + ".png'>" + side_text_parsed
+    })
+     .on('plotly_unhover', function(data){
+    });
+  };
+  files_select.onchange = function() {
+    try {
+      Plotly.deleteTraces('plotly', 0);
+    } catch (err) {
+      // Nothing
+    }
+    makeplot(files_select.options[files_select.selectedIndex].text)
+  };
+  makeplot("100");
+</script>
